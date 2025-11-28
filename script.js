@@ -8,55 +8,81 @@ AC.addEventListener('click', () => {
 one.addEventListener('click', () => {
     main_text=main_text+"1";
     text.textContent = `${main_text}`;
+    if (main_text.length>17){
+        text.textContent="Слишком длинное";
+    }
 })
 
 two.addEventListener('click', () => {
     main_text=main_text+"2";
     text.textContent = `${main_text}`;
+    if (main_text.length>17){
+        text.textContent="Слишком длинное";
+    }
 })
 
 three.addEventListener('click', () => {
     main_text=main_text+"3";
     text.textContent = `${main_text}`;
+    if (main_text.length>17){
+        text.textContent="Слишком длинное";
+    }
 })
 
 four.addEventListener('click', () => {
     main_text=main_text+"4";
     text.textContent = `${main_text}`;
+    if (main_text.length>17){
+        text.textContent="Слишком длинное";
+    }
 })
 
 five.addEventListener('click', () => {
     main_text=main_text+"5";
     text.textContent = `${main_text}`;
+    if (main_text.length>17){
+        text.textContent="Слишком длинное";
+    }
 })
 
 six.addEventListener('click', () => {
     main_text=main_text+"6";
     text.textContent = `${main_text}`;
+    if (main_text.length>17){
+        text.textContent="Слишком длинное";
+    }
 })
 
 seven.addEventListener('click', () => {
     main_text=main_text+"7";
     text.textContent = `${main_text}`;
+    if (main_text.length>17){
+        text.textContent="Слишком длинное";
+    }
 })
 
 eight.addEventListener('click', () => {
     main_text=main_text+"8";
     text.textContent = `${main_text}`;
+    if (main_text.length>17){
+        text.textContent="Слишком длинное";
+    }
 })
 
 nine.addEventListener('click', () => {
     main_text=main_text+"9",
     text.textContent = `${main_text}`;
+    if (main_text.length>17){
+        text.textContent="Слишком длинное";
+    }
 })
 
 zero.addEventListener('click', () => {
-    if(main_text==""){
-        return;
-    }
-    if(operators.includes(main_text.slice(-1))) return
     main_text=main_text+"0";
     text.textContent = `${main_text}`;
+    if (main_text.length>17){
+        text.textContent="Слишком длинное";
+    }
 })
 
 zero_zero.addEventListener('click', () => {
@@ -66,6 +92,9 @@ zero_zero.addEventListener('click', () => {
     if(operators.includes(main_text.slice(-1))) return
     main_text=main_text+"00";
     text.textContent = `${main_text}`;
+    if (main_text.length>17){
+        text.textContent="Слишком длинное";
+    }
 })
 
 dot.addEventListener('click', () => {
@@ -94,7 +123,9 @@ plus.addEventListener('click',() =>{
         main_text=main_text+'+';
         text.textContent=`${main_text}`
         dot_flag=1
-    
+    if (main_text.length>17){
+        text.textContent="Слишком длинное";
+    }
 })
 
 minus.addEventListener('click',() =>{
@@ -103,7 +134,9 @@ minus.addEventListener('click',() =>{
         main_text=main_text+'-';
         text.textContent=`${main_text}`
         dot_flag=1
-    
+    if (main_text.length>17){
+        text.textContent="Слишком длинное";
+    }
 })
 
 umnogenie.addEventListener('click',() =>{
@@ -112,7 +145,9 @@ umnogenie.addEventListener('click',() =>{
         main_text=main_text+'×';
         text.textContent=`${main_text}`
         dot_flag=1
-    
+    if (main_text.length>17){
+        text.textContent="Слишком длинное";
+    }
 })
 
 delenie.addEventListener('click',() =>{
@@ -121,7 +156,9 @@ delenie.addEventListener('click',() =>{
         main_text=main_text+'÷';
         text.textContent=`${main_text}`
         dot_flag=1
-    
+    if (main_text.length>17){
+        text.textContent="Слишком длинное";
+    }
 })
 
 procent.addEventListener('click',() =>{
@@ -130,7 +167,9 @@ procent.addEventListener('click',() =>{
         main_text=main_text+'%';
         text.textContent=`${main_text}`
         dot_flag=1
-    
+    if (main_text.length>17){
+        text.textContent="Слишком длинное";
+    }
 })
 
 function calculate(main_text) {
@@ -236,5 +275,12 @@ ravno.addEventListener('click',() =>{
         } else {
             text.textContent = result;
         }
-        main_text=String(result);
+        if(String(result)!="NaN"){
+            main_text=String(result);
+        }
+        else{
+            main_text="";
+        }
+        
 })
+
